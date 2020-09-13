@@ -1,5 +1,6 @@
-###Sorting Algorithm Visualizer
-A visualization for various sorting algorithms like merge sort, heap sort, quick sort, insertion sort, bubble sort, selection sort and many more.
+# Sorting-Algorithm-Visualizer
+
+> A visualization for various sorting algorithms like merge sort, heap sort, quick sort, insertion sort, bubble sort, selection sort and many more.
 <hr/>
 
 View [Demo](https://tirtharajghosh.github.io/Sorting-Algorithm-Visualizer/)
