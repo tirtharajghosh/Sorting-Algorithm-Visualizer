@@ -1,0 +1,11 @@
+.array-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.array-bar {
+    width: 5px;
+    display: inline-block; /* arranges the array bars in horizontal way*/
+    margin: 0 1px; /*Top,Bottom -> 0px Left,Right -> 1px*/
+}
