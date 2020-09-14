@@ -1,6 +1,6 @@
 {
   "name": "sa-visualizer",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "author": "Tirtharaj Ghosh",
   "homepage": "https://tirtharajghosh.github.io/Sorting-Algorithm-Visualizer/",
   "dependencies": {
