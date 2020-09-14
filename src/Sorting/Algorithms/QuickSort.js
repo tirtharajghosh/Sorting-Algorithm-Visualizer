@@ -2,11 +2,10 @@ export function getQuickSortAnimations(array) {
     let animations  = [];
     let auxillaryArray = array.slice();
     quickSort(auxillaryArray, 0, auxillaryArray.length - 1, animations);
-    // const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
+    const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
     // console.log("sort works correctly? ",arraysAreEqual(javaScriptSortedArray, auxillaryArray));
-    // array = auxillaryArray;
-    // return [animations, array];
-    return animations;
+    array = auxillaryArray;
+    return [animations, array];
 }
 
 function quickSort(auxillaryArray, startIndex, endIndex, animations) {

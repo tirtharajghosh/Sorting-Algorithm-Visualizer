@@ -2,11 +2,10 @@ export function getMergeSortAnimations(array) {
     let animations  = [];
     let auxillaryArray = array.slice();
     mergeSort(auxillaryArray, 0, auxillaryArray.length - 1, animations);
-    // const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
+    const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
     // console.log(arraysAreEqual(javaScriptSortedArray, auxillaryArray));
-    // array = auxillaryArray;
-    // return [animations, array];
-    return animations;
+    array = auxillaryArray;
+    return [animations, array];
 }
 
 function mergeSort(auxillaryArray, startIndex, endIndex, animations) {

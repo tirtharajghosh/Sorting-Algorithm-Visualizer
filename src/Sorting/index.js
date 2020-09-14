@@ -32,8 +32,7 @@ class Sorting extends Component {
             radix: [],
             bucket: []
         };
-        this.durations = [];
-        this.rank =0;
+        this.rank = 0;
     }
 
     componentDidMount(){
@@ -77,6 +76,8 @@ class Sorting extends Component {
     }
 
     startSorting(){
+        this.resetColors();
+        this.resetBadges();
         this.disableButtons();
         this.quickSort();
         this.bubbleSort();
@@ -89,31 +90,31 @@ class Sorting extends Component {
     }
 
     quickSort(){
-        const animations = getQuickSortAnimations(this.state.quick);
-        this.sortHelper(animations,"Quick");
+        const [animations, sortedArray] = getQuickSortAnimations(this.state.quick);
+        this.sortHelper(animations, sortedArray, "Quick");
     }
 
     bubbleSort() {
-        const animations = getBubbleSortAnimations(this.state.bubble);
-        this.sortHelper(animations,"Bubble");
+        const [animations, sortedArray] = getBubbleSortAnimations(this.state.bubble);
+        this.sortHelper(animations, sortedArray, "Bubble");
     }
 
     mergeSort() {
-        const animations = getMergeSortAnimations(this.state.merge);
-        this.sortHelper(animations,"Merge");
+        const [animations, sortedArray] = getMergeSortAnimations(this.state.merge);
+        this.sortHelper(animations, sortedArray, "Merge");
     }
 
     insertionSort() {
-        const animations = getInsertionSortAnimations(this.state.insertion);
-        this.sortHelper(animations,"Insertion");
+        const [animations, sortedArray] = getInsertionSortAnimations(this.state.insertion);
+        this.sortHelper(animations, sortedArray, "Insertion");
     }
 
     selectionSort(){
-        const animations = getSelectionSortAnimations(this.state.selection);
-        this.sortHelper(animations,"Selection");
+        const [animations, sortedArray] = getSelectionSortAnimations(this.state.selection);
+        this.sortHelper(animations, sortedArray, "Selection");
     }
 
-    sortHelper(animations, type){
+    sortHelper(animations, sortedArray, type){
         for (let i = 0; i < animations.length; i++) {
             const isColorChange = animations[i][0] === "comparision1" || animations[i][0] === "comparision2";
             const arrayBars = document.getElementsByClassName('array-bar '+type.toLowerCase());
@@ -143,11 +144,46 @@ class Sorting extends Component {
         for(let i = 0; i < arrayBars.length; i++){
             setTimeout(() => arrayBars[i].style.backgroundColor = TERTIARY_COLOR, RESTORE_TIME);
         }
-        // setTimeout(() => this.durations.push({type: type, time: RESTORE_TIME-100}), RESTORE_TIME-100);
-        // update badge
-        // this.setState({array: sortArray})
-        setTimeout(() => { var badge = (this.rank === 0)?'warning':((this.rank === 1)?'secondary':(this.rank === 2)? 'black': 'white'); document.getElementById("info-"+type.toLowerCase()).innerHTML = "<sup><i class='fa fa-star text-"+badge+"' ></i></sup>"; this.rank++; if(this.rank===5){this.enableButtons();}   }, RESTORE_TIME-100);
+
+        setTimeout(() => {
+            this.pushSortedArrayIntoState(sortedArray, type);
+            // console.log(sortedArray);
+            var badge = (this.rank === 0)?'warning':((this.rank === 1)?'secondary':(this.rank === 2)? 'black': 'white'); 
+            if(this.rank<3){ 
+                document.getElementById("info-"+type.toLowerCase()).innerHTML = "<sup><i class='fa fa-star text-"+badge+"' ></i>"+(this.rank+1)+"</sup>";
+            } 
+            this.rank++;
+            if(this.rank===5){
+                this.enableButtons(); 
+                this.rank=0;
+            }   
+        }, RESTORE_TIME-100);
         console.log(type + " Sort: Completed in "+(RESTORE_TIME-100)+" ms");
+    }
+
+    pushSortedArrayIntoState(sortedArray, type){
+        this.setState(prevState => {
+            let state = { ...prevState };       // creating copy of state variable jasper
+            switch(type){                       // update the property, assign a new value
+                case "Quick": state.quick = sortedArray; break;
+    
+                case "Bubble": state.bubble = sortedArray; break;
+    
+                case "Merge": state.merge = sortedArray; break;
+    
+                case "Insertion": state.insertion = sortedArray; break;
+    
+                case "Selection": state.selection = sortedArray; break;
+    
+                case "Heap": state.heap = sortedArray; break;
+    
+                case "Radix": state.radix = sortedArray; break;
+    
+                case "Bucket": state.bucket = sortedArray; break;
+    
+            }
+            return state;                                 // return new object
+          });
     }
 
     render(){

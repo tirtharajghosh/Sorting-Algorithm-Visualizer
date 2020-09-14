@@ -2,11 +2,10 @@ export function getInsertionSortAnimations(array) {
     let animations  = [];
     let auxillaryArray = array.slice();
     insertionSort(auxillaryArray, animations);
-    // const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
+    const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
     // console.log("sort works correctly? ",arraysAreEqual(javaScriptSortedArray, auxillaryArray));
-    // array = auxillaryArray;
-    // return [animations, array];
-    return animations;
+    array = auxillaryArray;
+    return [animations, array];
 }
 
 function insertionSort(auxillaryArray, animations) {
