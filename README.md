@@ -13,13 +13,8 @@
   <a href="https://github.com/tirtharajghosh/Sorting-Algorithm-Visualizer/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Sorting Algorithm Visualizer is released under the MIT license." />
   </a>
-<<<<<<< HEAD
   <a href="https://github.com/tirtharajghosh/Sorting-Algorithm-Visualizer/">
     <img src="https://img.shields.io/github/package-json/v/tirtharajghosh/Sorting-Algorithm-Visualizer" alt="Sorting Algorithm Visualizer Version" />
-=======
-  <a href="https://badge.fury.io/gh/tirtharajghosh%2FSorting-Algorithm-Visualizer">
-    <img src="https://badge.fury.io/gh/tirtharajghosh%2FSorting-Algorithm-Visualizer.svg" alt="GitHub version" height="18">
->>>>>>> 3d93d441c70ab5943a1fbd9875a06850342ee709
   </a>
   <a href="https://github.com/tirtharajghosh/Sorting-Algorithm-Visualizer/">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
