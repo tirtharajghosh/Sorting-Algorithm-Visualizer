@@ -13,8 +13,8 @@
   <a href="https://github.com/tirtharajghosh/Sorting-Algorithm-Visualizer/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Sorting Algorithm Visualizer is released under the MIT license." />
   </a>
-  <a href="https://www.npmjs.org/package/react-native">
-    <img src="https://badge.fury.io/js/react-native.svg" alt="Current npm package version." />
+  <a href="https://badge.fury.io/gh/tirtharajghosh%2FSorting-Algorithm-Visualizer">
+    <img src="https://badge.fury.io/gh/tirtharajghosh%2FSorting-Algorithm-Visualizer.svg" alt="GitHub version" height="18">
   </a>
   <a href="https://github.com/tirtharajghosh/Sorting-Algorithm-Visualizer/">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
