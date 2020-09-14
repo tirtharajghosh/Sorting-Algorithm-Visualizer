@@ -36,8 +36,6 @@ Sorting Algorithm Visualizer brings [**React**'s][r] declarative UI framework to
 - **Easily-Understandable.** Built with keeping the good practices in mind. Encapsulated components that manage their state, then compose them to make the UI.
 - **Ranking System.** See the ranking in real-time. This wil enrich your thoughts for various situation.
 
-React Native is developed and supported by many companies and individual core contributors. Find out more in our [ecosystem overview][e].
-
 [r]: https://reactjs.org/
 
 ## 📄 License
