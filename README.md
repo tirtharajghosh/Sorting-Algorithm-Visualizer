@@ -44,8 +44,4 @@ React Native is developed and supported by many companies and individual core co
 
 Sorting Algorithm Visualizer is MIT licensed, as found in the [LICENSE][l] file.
 
-<<<<<<< HEAD
 [l]: https://github.com/tirtharajghosh/Sorting-Algorithm-Visualizer/blob/master/LICENSE
-=======
-[l]: https://github.com/tirtharajghosh/Sorting-Algorithm-Visualizer/blob/master/LICENSE
->>>>>>> 3d93d441c70ab5943a1fbd9875a06850342ee709
